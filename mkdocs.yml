@@ -1,6 +1,6 @@
 site_name: Tesla RT Documentation
 site_description: Documentation for the open-source Tesla RT / RTNG rt kernel (crate rt 0.20.1) — a fully preemptible realtime OS built around atomics-based synchronization.
-site_url: http://127.0.0.1:8000/
+site_url: https://vaishnavimulik25.github.io/tesla-rt-docs/
 
 theme:
   name: material
