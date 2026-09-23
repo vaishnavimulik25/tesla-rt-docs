@@ -16,6 +16,9 @@ FreeRTOS-style documentation for the open-source **RTNG / `rt`** kernel
 | [`site/`](site/) | Same prebuilt HTML (local mirror of `docs/`) |
 | `mkdocs.yml` | MkDocs Material config (`docs_dir: markdown`) |
 
+
+HTML pages are **flat `.html` files** (e.g. `01-Introduction.html`, `07-Examples/cond.html`) so you can open a page with one click instead of entering a folder and then opening `index.html`.
+
 ## Browse locally
 
 ```bash
