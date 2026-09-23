@@ -3,32 +3,34 @@
 FreeRTOS-style documentation for the open-source **RTNG / `rt`** kernel
 ([https://git.rtng.org/rt/rt](https://git.rtng.org/rt/rt), crates.io `rt`, Apache-2.0).
 
-These pages cover kernel features, public APIs, examples, supported devices from
-[https://git.rtng.org/rt](https://git.rtng.org/rt) port repos, and what benchmarks exist in-tree.
+**Browse online (GitHub Pages):** https://vaishnavimulik25.github.io/tesla-rt-docs/
 
 **Scope:** open-source kernel and public BSP repositories only. Partner materials may call this “Tesla’s RTOS”; this repo does **not** claim closed vehicle production software.
 
-## Browse the HTML site
+## What’s in the repo
 
-Prebuilt static site is in [`site/`](site/). After cloning:
+| Path | Contents |
+|------|----------|
+| [`docs/`](docs/) | Prebuilt HTML site (also published via GitHub Pages) |
+| [`markdown/`](markdown/) | Editable MkDocs markdown sources |
+| [`site/`](site/) | Same prebuilt HTML (local mirror of `docs/`) |
+| `mkdocs.yml` | MkDocs Material config (`docs_dir: markdown`) |
+
+## Browse locally
 
 ```bash
-cd site
+cd docs   # or: cd site
 python3 -m http.server 8000
 # open http://127.0.0.1:8000/
 ```
 
-Or open `site/index.html` directly in a browser (some browsers restrict `file://` search).
-
-## Edit markdown / rebuild
-
-Sources live under [`docs/`](docs/). Rebuild with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/):
+## Rebuild from markdown
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install mkdocs-material
 .venv/bin/mkdocs build
-# output in site/
+# then sync: cp -a site/. docs/
 ```
 
 ## Upstream
