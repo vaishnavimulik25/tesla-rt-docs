@@ -1,0 +1,141 @@
+site_name: Tesla RT Documentation
+site_description: Documentation for the open-source Tesla RT / RTNG rt kernel (crate rt 0.20.1) — a fully preemptible realtime OS built around atomics-based synchronization.
+site_url: http://127.0.0.1:8000/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Overview: index.md
+  - Introduction: 01-Introduction.md
+  - Getting Started: 02-Getting-Started.md
+  - Kernel Features:
+      - Overview: 03-Kernel-Features/index.md
+      - Tasks: 03-Kernel-Features/Tasks.md
+      - Scheduling: 03-Kernel-Features/Scheduling.md
+      - Mutexes: 03-Kernel-Features/Mutexes.md
+      - Semaphores: 03-Kernel-Features/Semaphores.md
+      - Condition Variables: 03-Kernel-Features/Condition-Variables.md
+      - Events: 03-Kernel-Features/Events.md
+      - Queues: 03-Kernel-Features/Queues.md
+      - Notifications: 03-Kernel-Features/Notifications.md
+      - Timers: 03-Kernel-Features/Timers.md
+      - Sleep and Tick: 03-Kernel-Features/Sleep-and-Tick.md
+      - Other Primitives: 03-Kernel-Features/Other-Primitives.md
+  - Interrupts: 04-Interrupts.md
+  - Memory and Static Allocation: 05-Memory-and-Static-Allocation.md
+  - Architecture and Ports: 06-Architecture-and-Ports.md
+  - Supported Devices: Supported-Devices.md
+  - Building and Examples: 07-Building-and-Examples.md
+  - Example Catalog:
+      - Index: 07-Examples/index.md
+      - simple: 07-Examples/simple.md
+      - empty: 07-Examples/empty.md
+      - sem: 07-Examples/sem.md
+      - mutex: 07-Examples/mutex.md
+      - recursive: 07-Examples/recursive.md
+      - donate: 07-Examples/donate.md
+      - fair: 07-Examples/fair.md
+      - cond: 07-Examples/cond.md
+      - event: 07-Examples/event.md
+      - notify: 07-Examples/notify.md
+      - queue: 07-Examples/queue.md
+      - rwlock: 07-Examples/rwlock.md
+      - once: 07-Examples/once.md
+      - pool: 07-Examples/pool.md
+      - timer: 07-Examples/timer.md
+      - sleep: 07-Examples/sleep.md
+      - tls: 07-Examples/tls.md
+      - float: 07-Examples/float.md
+      - cycle/yield: 07-Examples/cycle-yield.md
+      - cycle/sleep: 07-Examples/cycle-sleep.md
+      - cycle/sem: 07-Examples/cycle-sem.md
+      - cycle/mutex: 07-Examples/cycle-mutex.md
+      - cycle/event: 07-Examples/cycle-event.md
+      - cycle/notify: 07-Examples/cycle-notify.md
+      - cycle/queue: 07-Examples/cycle-queue.md
+      - water/sem: 07-Examples/water-sem.md
+      - water/cond: 07-Examples/water-cond.md
+      - water/barrier: 07-Examples/water-barrier.md
+      - water/harness: 07-Examples/water-water.md
+  - C / C++ / Rust: 08-C-CXX-Rust.md
+  - API Reference:
+      - Overview: 09-API-Reference/index.md
+      - abort: 09-API-Reference/abort.md
+      - assert: 09-API-Reference/assert.md
+      - atomic: 09-API-Reference/atomic.md
+      - barrier: 09-API-Reference/barrier.md
+      - cond: 09-API-Reference/cond.md
+      - container: 09-API-Reference/container.md
+      - context: 09-API-Reference/context.md
+      - cycle: 09-API-Reference/cycle.md
+      - event: 09-API-Reference/event.md
+      - exit: 09-API-Reference/exit.md
+      - idle: 09-API-Reference/idle.md
+      - interrupt: 09-API-Reference/interrupt.md
+      - list: 09-API-Reference/list.md
+      - log: 09-API-Reference/log.md
+      - mpu: 09-API-Reference/mpu.md
+      - mutex: 09-API-Reference/mutex.md
+      - notify: 09-API-Reference/notify.md
+      - once: 09-API-Reference/once.md
+      - panic: 09-API-Reference/panic.md
+      - pend_function: 09-API-Reference/pend_function.md
+      - pool: 09-API-Reference/pool.md
+      - queue: 09-API-Reference/queue.md
+      - rwlock: 09-API-Reference/rwlock.md
+      - sem: 09-API-Reference/sem.md
+      - stack: 09-API-Reference/stack.md
+      - start: 09-API-Reference/start.md
+      - syscall: 09-API-Reference/syscall.md
+      - task: 09-API-Reference/task.md
+      - tick: 09-API-Reference/tick.md
+      - timer: 09-API-Reference/timer.md
+      - tls: 09-API-Reference/tls.md
+      - trace: 09-API-Reference/trace.md
+      - trap: 09-API-Reference/trap.md
+  - Porting Guide: 10-Porting-Guide.md
+  - FreeRTOS / Zephyr Comparison: 11-FreeRTOS-Zephyr-Comparison.md
+  - Benchmarks: 12-Benchmarks.md
+
+strict: false
+
+exclude_docs: |
+  /README.md
+  /00-Overview.md
